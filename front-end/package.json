@@ -1,0 +1,14 @@
+{
+  "name": "pes-t3",
+  "version": "1.0.0",
+  "description": "trabalho referente a g3",
+  "main": "index.html",
+  "private" : true,
+  "scripts": {
+	"start" : "browser-sync start --server --files 'public/*.*'"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.12.10"
+  }
+}
