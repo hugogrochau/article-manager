@@ -13,7 +13,6 @@ Integrantes
  - Marcos Rapoport
  - Philipe Bonfim
 
-----------
 Tecnologias
 -------------
 Front-end (Páginas web)
@@ -26,7 +25,6 @@ Back-end
 Banco
 :   A definir
 
-----------
 Diário
 -------------
 03/06/2016
