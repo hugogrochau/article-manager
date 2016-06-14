@@ -23,7 +23,7 @@ Tecnologias
 -   Lápis
 
 **Banco**
--   A definir
+-   Postgresql
 
 Diário
 -------------
