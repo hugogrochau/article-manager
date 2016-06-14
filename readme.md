@@ -38,4 +38,5 @@ Diário
 -   Configuração do lapis para uso do etLua (biblioteca de renderização dinamica)
 
 **13/06/2016**
--   Criação das páginas : Conferência, Conferências, Edição e Artigo(em andamento)
+-   Criação das páginas : Conferência, Conferências, Edição e Artigo
+-   Criação das sectios para poder adicionar conferência, edição e artigo
