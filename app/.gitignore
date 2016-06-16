@@ -1,6 +1,7 @@
 .tup
 logs/
 conf/
+nginx.conf
 nginx.conf.compiled
 mime.types
 proxy_temp/
