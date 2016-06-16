@@ -1,0 +1,12 @@
+local config = require("lapis.config")
+
+config("development", {
+    port = 8080,
+    postgres = {
+        host = "pes201601.postgresql.dbaas.com.br",
+        port = "5432",
+        user = "pes201601",
+        password = "",
+        database = "pes201601"
+    }
+})
