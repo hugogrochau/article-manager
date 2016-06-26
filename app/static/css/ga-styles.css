@@ -24,3 +24,11 @@
     color : #666;
     padding : 10px;
 }
+
+.navbar-nav a{
+    cursor: pointer;
+}
+
+.navbar-brand {
+    cursor: pointer;
+}
