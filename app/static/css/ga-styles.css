@@ -5,3 +5,22 @@
 .ga-table th {
     color : #666;
 }
+
+.ga-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.ga-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.ga-container {
+    padding: 2px 16px;
+}
+
+.ga-card-title {
+    color : #666;
+    padding : 10px;
+}
