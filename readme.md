@@ -47,3 +47,8 @@ Diário
 **13/06/2016**
 -   Criação das páginas : Conferência, Conferências, Edição e Artigo
 -   Criação das sectios para poder adicionar conferência, edição e artigo
+
+**26/06/2016**
+-   Criação da página : Administrador
+-   Novos campos forma adicionados nas páginas para poder adicionar autores e editores
+-   Isso termina a parte do Front-End
