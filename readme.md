@@ -50,5 +50,5 @@ Diário
 
 **26/06/2016**
 -   Criação da página : Administrador
--   Novos campos forma adicionados nas páginas para poder adicionar autores e editores
+-   Novos campos foram adicionados nas páginas para poder adicionar autores e editores
 -   Isso termina a parte do Front-End
