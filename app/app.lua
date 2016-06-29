@@ -2,7 +2,7 @@ local lapis = require("lapis")
 local app = lapis.Application()
 local Person = require("models.person")
 local Conference = require("models.conference")
---local db = require("lapis.db")
+local Article = require("models.article")
 
 app:enable("etlua")
 app.layout = require("views.layout")
@@ -17,18 +17,21 @@ end)
 app:get("conferences", "/conferences", function(self)
     self.conferences = Conference:select()
     return { render = "conferences" }
-    -- return self.conferences[1].date
+end)
+
+app:get("conference", "/conference/:id", function(self)
+    self.conference = Conference:find(self.params.id)
+    return { render = "conference" }
 end)
 
 app:get("administrator", "/administrator", function(self)
     self.administrator = Person:select()
     return { render = "administrator" }
-    -- return self.conferences[1].date
 end)
 
 -- POST routes
 
-app:post("conference", "/conference", function(self)
+app:post("add_conference", "/conference", function(self)
     conference = Conference:create({
         issm = self.params.issm,
         doi = self.params.doi,
@@ -36,7 +39,6 @@ app:post("conference", "/conference", function(self)
         date = self.params.date,
         name = self.params.name
     })
-    --return "Created conference called " .. conference.name .. " with the issm " .. conference.issm
     self.conferences = Conference:select()
     return { render = "conferences"}
 end)

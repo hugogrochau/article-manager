@@ -50,18 +50,18 @@
             <table class="table ga-table table-hover">
                 <thead>
                 <tr>
-                    <th>NOME</th>
+                    <th>Nome</th>
                     <th>ISSM</th>
                     <th>DOI</th>
-                    <th>LOCAL</th>
-                    <th>DATA</th>
+                    <th>Local</th>
+                    <th>Data</th>
                     <th></th>
                 </tr>
                 </thead>
                 <tbody>
                 <% for i, conference in ipairs(conferences) do %>
                 <tr>
-                    <td><%= conference.name %></td>
+                    <td><a href="<%= url_for("conference") %><%= conference.id %>"><%= conference.name %></a></td>
                     <td><%= conference.issm %></td>
                     <td><%= conference.doi %></td>
                     <td><%= conference.place %></td>

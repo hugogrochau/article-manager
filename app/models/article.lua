@@ -2,8 +2,8 @@ local Model = require("lapis.db.model").Model
 
 local Article = Model:extend("article", {
     relations = {
-        {"conference", belongs_to = "Conference"},
-        {"author_article", has_many = "AuthorArticle"}
+        {"conference", has_one = "Conference"},
+        {"author_articles", has_many = "AuthorArticle", key = "article_id"}
     }
 })
 

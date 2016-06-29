@@ -2,7 +2,7 @@ local Model = require("lapis.db.model").Model
 
 local Conference = Model:extend("conference", {
     relations = {
-        {"article", has_one = "Article"},
+        {"articles", has_many = "Article"},
         {"editor_conference", has_many = "EditorConference"}
     }
 })

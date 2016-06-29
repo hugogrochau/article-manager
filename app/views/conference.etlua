@@ -1,0 +1,57 @@
+    <div class="page-header">
+        <h2><%= conference.name %></h2>
+    </div>
+    <div>
+        <div class="panel">
+            <div class="panel-heading"><h4>Add article</h4></div>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="inputName" class="col-sm-2 control-label">Nome</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="nome do artigo" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputAuthors" class="col-sm-2 control-label">Autores</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="authors" name="authors" placeholder="Paulo, Roberto, Joao, Gustavo" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputAbstract" class="col-sm-2 control-label">Resumo</label>
+                    <div class="col-sm-10">
+                        <textarea rows="4" name="abstract" id="abstract" style="width : 100%" placeholder="resumo"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputFile" class="col-sm-2 control-label">Arquivo</label>
+                    <div class="col-sm-10">
+                        <input type="file" class="form-control" id="file" name="file" placeholder="arquivo" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">Adicionar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="list-group">
+            <% for i, article in ipairs(conference:get_articles()) do %>
+            <a href="/static/articles/<%= article.file_path %>" class="list-group-item">
+                <h4 class="list-group-item-heading"><%= article.title %></h4>
+                <p class="list-group-item-text"><%= article.abstract %></p>
+                <p class="list-group-item-text"><strong>Authors:</strong></p>
+                <% for i, author_article in ipairs(article:get_author_articles()) do %>
+                    <p class="list-group-item-text"><%= author_article:get_person().name %></p>
+                <% end %>
+                <p class="list-group-item-text"><strong>Downloads: <%= article.download_count %></strong></p>
+            </a>
+            <% end %>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

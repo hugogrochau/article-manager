@@ -1,6 +1,4 @@
-        
         <div class="jumbotron">
-            <h2>GERENCIADOR DE ARTIGOS</h2>
             <p class="lead">
                 Veja artigos que foram apresentados em cada conferência.
             </p>
@@ -10,7 +8,7 @@
         </div>
 
         <div class="row" style="margin : 0">
-            <h2>CONFERÊNCIAS</h2>
+            <h2>Conferências</h2>
 
             <div class="col-md-6">
                 <% for i, conference in ipairs(conferences) do %>
