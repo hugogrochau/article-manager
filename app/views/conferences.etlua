@@ -1,11 +1,11 @@
 
     <!-- HEADER -->
     <div class="page-header">
-        <h2>CONFERÊNCIAS</h2>
+        <h2>Conferências</h2>
     </div>
 
     <div class="panel">
-        <div class="panel-heading"><h4>ADICIONAR CONFERÊNCIA</h4></div>
+        <div class="panel-heading"><h4>Adicionar conferência</h4></div>
         <form class="form-horizontal" action="conference" method="post">
             <div class="form-group">
                 <label for="inputConferenceName" class="col-sm-2 control-label">Nome da conferência</label>
@@ -47,9 +47,6 @@
 
     <div class="row ga-row">
         <div class="panel">
-            <div class="panel-heading">
-                <h4><a href="#">CONFERENCIAS</a></h4>
-            </div>
             <table class="table ga-table table-hover">
                 <thead>
                 <tr>
@@ -76,4 +73,3 @@
             </table>
         </div>
     </div>
-    

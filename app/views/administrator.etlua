@@ -1,11 +1,11 @@
 <div class="container">
     <!-- HEADER -->
     <div class="page-header">
-        <h2>ADMINISTRAÇÃO</h2>
+        <h2>Administração</h2>
     </div>
 
     <div class="panel">
-        <div class="panel-heading"><h4>ADICIONAR USUÁRIO (EDITOR)</h4></div>
+        <div class="panel-heading"><h4>Adicionar usuário (editor)</h4></div>
         <form class="form-horizontal" action="person" method="post">
             <div class="form-group">
                 <label for="inputName" class="col-sm-2 control-label">Nome</label>
@@ -45,6 +45,3 @@
         </tbody>
     </table>
 </div>
-
-
-

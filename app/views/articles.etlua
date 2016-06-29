@@ -1,8 +1,0 @@
-<% for i, article in ipairs(articles) do %>
-<div class="am-card">
-    <h4 class="am-card-title"><%= article.title %></h4>
-    <div class="am-container">
-	<p><%= article.desc %></p>
-    </div>
-</div>
-<% end %>

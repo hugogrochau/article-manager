@@ -7,53 +7,28 @@ local Conference = require("models.conference")
 app:enable("etlua")
 app.layout = require("views.layout")
 
-app:get("/", function(self)
+-- GET Routes
+
+app:get("index", "/", function(self)
     self.conferences = Conference:select()
     return { render = "index" }
 end)
 
-app:get("/conferences", function(self)
+app:get("conferences", "/conferences", function(self)
     self.conferences = Conference:select()
     return { render = "conferences" }
     -- return self.conferences[1].date
 end)
 
-app:get("/administrator", function(self)
+app:get("administrator", "/administrator", function(self)
     self.administrator = Person:select()
     return { render = "administrator" }
     -- return self.conferences[1].date
 end)
 
-app:match("/articles", function(self)
-  local articles= {}
+-- POST routes
 
-  articles[1] = {}
-  articles[1].title = "article_a"
-  articles[1].desc = "desc_article_a"
-
-  articles[2] = {}
-  articles[2].title = "article_b"
-  articles[2].desc = "desc_article_b"
-
-  articles[3] = {}
-  articles[3].title = "article_c"
-  articles[3].desc = "desc_article_c"
-
-  self.articles = articles
-  return { render = "articles" }
-end)
-
-app:match("/person", function(self)
-    person = Person:create({
-        email = self.params.email,
-        name = self.params.name
-    })
-    --return "Created person called " .. person.name .. " with the email " .. person.email
-    self.administrator = Person:select()
-    return { render = "administrator"}
-end)
-
-app:post("/conference", function(self)
+app:post("conference", "/conference", function(self)
     conference = Conference:create({
         issm = self.params.issm,
         doi = self.params.doi,
@@ -68,13 +43,3 @@ end)
 
 
 return app
-
-
-
-
-
-
-
-
-
-
