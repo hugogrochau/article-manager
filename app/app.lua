@@ -8,6 +8,7 @@ app:enable("etlua")
 app.layout = require("views.layout")
 
 app:get("/", function(self)
+    self.conferences = Conference:select()
     return { render = "index" }
 end)
 
@@ -56,7 +57,6 @@ app:post("/conference", function(self)
     self.conferences = Conference:select()
     return { render = "conferences"}
 end)
-
 
 
 return app

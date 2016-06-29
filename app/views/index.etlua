@@ -2,51 +2,38 @@
         <div class="jumbotron">
             <h2>GERENCIADOR DE ARTIGOS</h2>
             <p class="lead">
-                Gerencie os artigos das edições que você é responsável.
-                Comece agora!
+                Veja artigos que foram apresentados em cada conferência.
+            </p>
+            <p class="lead">
+                Caso seja editor, entre com seu usuário e senha para adicionar artigos.
             </p>
         </div>
 
         <div class="row" style="margin : 0">
-            <h2>ARTIGOS EM DESTAQUE</h2>
+            <h2>CONFERÊNCIAS</h2>
+
             <div class="col-md-6">
-                <div class="am-card">
-                    <h4 class="am-card-title">Titulo</h4>
-                    <div class="am-container">
-                        <p>Descrição</p>
-                    </div>
-                </div>
-                <div class="am-card">
-                    <h4 class="am-card-title">Titulo</h4>
-                    <div class="am-container">
-                        <p>Descrição</p>
-                    </div>
-                </div>
-                <div class="am-card">
-                    <h4 class="am-card-title">Titulo</h4>
-                    <div class="am-container">
-                        <p>Descrição</p>
-                    </div>
-                </div>
+                <% for i, conference in ipairs(conferences) do %>
+                    <% if i%2 == 1 then %>
+                        <div class="am-card">
+                            <h4 class="am-card-title"><%= conference.name %></h4>
+                            <div class="am-container">
+                                <p><%= conference.place %></p>
+                            </div>
+                        </div>
+                    <% end %>
+                <% end %>
             </div>
             <div class="col-md-6">
-                <div class="am-card">
-                    <h4 class="am-card-title">Titulo</h4>
-                    <div class="am-container">
-                        <p>Descrição</p>
-                    </div>
-                </div>
-                <div class="am-card">
-                    <h4 class="am-card-title">Titulo</h4>
-                    <div class="am-container">
-                        <p>Descrição</p>
-                    </div>
-                </div>
-                <div class="am-card">
-                    <h4 class="am-card-title">Titulo</h4>
-                    <div class="am-container">
-                        <p>Descrição</p>
-                    </div>
-                </div>
+                <% for i, conference in ipairs(conferences) do %>
+                    <% if i%2 == 0 then %>
+                        <div class="am-card">
+                            <h4 class="am-card-title"><%= conference.name %></h4>
+                            <div class="am-container">
+                                <p><%= conference.place %></p>
+                            </div>
+                        </div>
+                    <% end %>
+                <% end %>
             </div>
         </div>
