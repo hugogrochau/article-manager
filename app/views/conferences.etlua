@@ -5,42 +5,36 @@
     </div>
 
     <div class="panel">
-        <div class="panel-heading"><h4>ADICIONAR EDIÇÃO/CONFERÊNCIA</h4></div>
-        <form class="form-horizontal">
-            <div class="form-group">
-                <label for="inputEditionName" class="col-sm-2 control-label">Nome da edição</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEditionName" name="inputEditionName" placeholder="nome da edição" />
-                </div>
-            </div>
+        <div class="panel-heading"><h4>ADICIONAR CONFERÊNCIA</h4></div>
+        <form class="form-horizontal" action="conference" method="post">
             <div class="form-group">
                 <label for="inputConferenceName" class="col-sm-2 control-label">Nome da conferência</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputConferenceName" name="inputConferenceName" placeholder="nome da conferência" />
+                    <input type="text" class="form-control" id="name" name="name" placeholder="nome da conferência" />
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputIssim" class="col-sm-2 control-label">ISSIM</label>
+                <label for="inputIssim" class="col-sm-2 control-label">ISSM</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputIssim" name="inputIssim" placeholder="ISSIM" />
+                    <input type="text" class="form-control" id="issm" name="issm" placeholder="ISSM" />
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputDoi" class="col-sm-2 control-label">DOI</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputDoi" name="inputDoi" placeholder="DOI" />
+                    <input type="text" class="form-control" id="doi" name="doi" placeholder="DOI" />
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputPlace" class="col-sm-2 control-label">Local</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputPlace" name="inputPlace" placeholder="local" />
+                    <input type="text" class="form-control" id="place" name="place" placeholder="local" />
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputDate" class="col-sm-2 control-label">Data</label>
                 <div class="col-sm-10">
-                    <input type="date" class="form-control" id="inputDate" name="inputDate" placeholder="local" />
+                    <input type="date" class="form-control" id="date" name="date" placeholder="local" />
                 </div>
             </div>
             <div class="form-group">
