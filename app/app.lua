@@ -18,6 +18,12 @@ app:get("/conferences", function(self)
     -- return self.conferences[1].date
 end)
 
+app:get("/administrator", function(self)
+    self.administrator = Person:select()
+    return { render = "administrator" }
+    -- return self.conferences[1].date
+end)
+
 app:match("/articles", function(self)
   local articles= {}
 
@@ -42,7 +48,9 @@ app:match("/person", function(self)
         email = self.params.email,
         name = self.params.name
     })
-    return "Created person called " .. person.name .. " with the email " .. person.email
+    --return "Created person called " .. person.name .. " with the email " .. person.email
+    self.administrator = Person:select()
+    return { render = "administrator"}
 end)
 
 app:post("/conference", function(self)
