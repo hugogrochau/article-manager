@@ -1,6 +1,7 @@
 local lapis = require("lapis")
 local app = lapis.Application()
 local Person = require("models.person")
+local Conference = require("models.conference")
 --local db = require("lapis.db")
 
 app:enable("etlua")
@@ -10,6 +11,11 @@ app:get("/", function(self)
     return { render = "index" }
 end)
 
+app:get("/conferences", function(self)
+    self.conferences = Conference:select()
+    return { render = "conferences" }
+    -- return self.conferences[1].date
+end)
 
 app:match("/articles", function(self)
   local articles= {}
@@ -38,4 +44,27 @@ app:match("/person", function(self)
     return "Created person called " .. person.name .. " with the email " .. person.email
 end)
 
+app:post("/conference", function(self)
+    conference = Conference:create({
+        issm = self.params.issm,
+        doi = self.params.doi,
+        place = self.params.place,
+        date = self.params.date,
+        name = self.params.name
+    })
+    return "Created conference called " .. conference.name .. " with the issm " .. conference.issm
+end)
+
+
+
 return app
+
+
+
+
+
+
+
+
+
+

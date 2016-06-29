@@ -1,0 +1,85 @@
+
+    <!-- HEADER -->
+    <div class="page-header">
+        <h2>CONFERÊNCIAS</h2>
+    </div>
+
+    <div class="panel">
+        <div class="panel-heading"><h4>ADICIONAR EDIÇÃO/CONFERÊNCIA</h4></div>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="inputEditionName" class="col-sm-2 control-label">Nome da edição</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEditionName" name="inputEditionName" placeholder="nome da edição" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputConferenceName" class="col-sm-2 control-label">Nome da conferência</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputConferenceName" name="inputConferenceName" placeholder="nome da conferência" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputIssim" class="col-sm-2 control-label">ISSIM</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputIssim" name="inputIssim" placeholder="ISSIM" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputDoi" class="col-sm-2 control-label">DOI</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputDoi" name="inputDoi" placeholder="DOI" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPlace" class="col-sm-2 control-label">Local</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputPlace" name="inputPlace" placeholder="local" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputDate" class="col-sm-2 control-label">Data</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" id="inputDate" name="inputDate" placeholder="local" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Adicionar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="row ga-row">
+        <div class="panel">
+            <div class="panel-heading">
+                <h4><a href="#">CONFERENCIAS</a></h4>
+            </div>
+            <table class="table ga-table table-hover">
+                <thead>
+                <tr>
+                    <th>NOME</th>
+                    <th>ISSM</th>
+                    <th>DOI</th>
+                    <th>LOCAL</th>
+                    <th>DATA</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <% for i, conference in ipairs(conferences) do %>
+                <tr>
+                    <td><%= conference.name %></td>
+                    <td><%= conference.issm %></td>
+                    <td><%= conference.doi %></td>
+                    <td><%= conference.place %></td>
+                    <td><%= conference.date %></td>
+                    <td><a href="#"><span class="glyphicon glyphicon-remove"></span></a></td>
+                </tr>
+                <% end %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
