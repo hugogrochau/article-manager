@@ -1,13 +1,14 @@
         
         <div class="jumbotron">
-            <h2>ARTICLES MANAGER</h2>
+            <h2>GERENCIADOR DE ARTIGOS</h2>
             <p class="lead">
-                Here you can manage all your personal articles. Get started!
+                Gerencie os artigos das edições que você é responsável.
+                Comece agora!
             </p>
         </div>
 
         <div class="row" style="margin : 0">
-            <h2>TOP ARTICLES</h2>
+            <h2>ARTIGOS EM DESTAQUE</h2>
             <div class="col-md-6">
                 <div class="am-card">
                     <h4 class="am-card-title">Titulo</h4>
