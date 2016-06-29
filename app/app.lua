@@ -52,7 +52,9 @@ app:post("/conference", function(self)
         date = self.params.date,
         name = self.params.name
     })
-    return "Created conference called " .. conference.name .. " with the issm " .. conference.issm
+    --return "Created conference called " .. conference.name .. " with the issm " .. conference.issm
+    self.conferences = Conference:select()
+    return { render = "conferences"}
 end)
 
 
