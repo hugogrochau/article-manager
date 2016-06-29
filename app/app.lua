@@ -2,7 +2,6 @@ local lapis = require("lapis")
 local app = lapis.Application()
 local Person = require("models.person")
 local Conference = require("models.conference")
-local Article = require("models.article")
 
 app:enable("etlua")
 app.layout = require("views.layout")
