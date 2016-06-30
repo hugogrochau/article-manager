@@ -1,9 +1,10 @@
 local lapis = require("lapis")
-local app = lapis.Application()
+local db = require("lapis.db")
 local Validate = require("lapis.validate")
 local Person = require("models.person")
 local Conference = require("models.conference")
 local Article = require("models.article")
+local app = lapis.Application()
 
 app:enable("etlua")
 app.layout = require("views.layout")
@@ -11,6 +12,7 @@ app.layout = require("views.layout")
 -- GET Routes
 
 app:get("index", "/", function(self)
+    self.top_articles = db.query("SELECT * FROM article ORDER BY download_count LIMIT 10;") or {}
     self.conferences = Conference:select()
     return { render = "index" }
 end)
