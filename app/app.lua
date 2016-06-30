@@ -52,7 +52,27 @@ end)
 
 -- POST routes
 
-app:post("add_conference", "/conference", function(self)
+app:post("add_article", "/conference", function(self)
+    Validate.assert_valid(self.params, {
+        { "conference", exists = true },
+        { "file", is_file = true }
+    })
+
+    ---- solve this!
+    --local persons = Person:find_all({1,2,3,4 ...})
+
+    local article = Article:create({
+        title = self.params.title,
+        abstract = self.params.abstract,
+        conference_id = self.params.conference_id,
+        file_path = "static/articles/"..self.params.file,
+        download_count = 0
+    })
+    self.conference = Conference:find(self.params.conference_id)
+    return { render = "conference" }
+end)
+
+app:post("add_conference", "/conferences", function(self)
     conference = Conference:create({
         issm = self.params.issm,
         doi = self.params.doi,
@@ -74,6 +94,7 @@ app:match("add_person","/person", function(self)
     return { render = "administrator"}
 end)
 
+--[[
 app:post("/article", function(self)
     Validate.assert_valid(self.params, {
         { "conference", exists = true },
@@ -92,6 +113,7 @@ app:post("/article", function(self)
     })
     return "Created an article " .. self.params.title
 end)
+--]]
 
 app:post("searchConference", "/searchConference", function(self)
     where=false;

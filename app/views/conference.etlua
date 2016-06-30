@@ -4,27 +4,28 @@
     <div>
         <div class="panel">
             <div class="panel-heading"><h4>Add article</h4></div>
-            <form class="form-horizontal">
+	    <form class="form-horizontal" enctype: "multipart/form-data" action="/conference" method="post">
+	        <input type="hidden" name="conference_id" value="<%= conference.id %>">
                 <div class="form-group">
-                    <label for="inputName" class="col-sm-2 control-label">Nome</label>
+                    <label for="name" class="col-sm-2 control-label">Nome</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="name" name="name" placeholder="nome do artigo" />
+                        <input type="text" class="form-control" id="title" name="title" placeholder="nome do artigo" />
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputAuthors" class="col-sm-2 control-label">Autores</label>
+                    <label for="authors" class="col-sm-2 control-label">Autores</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="authors" name="authors" placeholder="Paulo, Roberto, Joao, Gustavo" />
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputAbstract" class="col-sm-2 control-label">Resumo</label>
+                    <label for="abstract" class="col-sm-2 control-label">Resumo</label>
                     <div class="col-sm-10">
                         <textarea rows="4" name="abstract" id="abstract" style="width : 100%" placeholder="resumo"></textarea>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputFile" class="col-sm-2 control-label">Arquivo</label>
+                    <label for="file" class="col-sm-2 control-label">Arquivo</label>
                     <div class="col-sm-10">
                         <input type="file" class="form-control" id="file" name="file" placeholder="arquivo" />
                     </div>
