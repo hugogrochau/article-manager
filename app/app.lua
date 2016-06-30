@@ -40,6 +40,16 @@ app:get("/articles", function(self)
     return { render = "articles" }
 end)
 
+app:get("searchConference", "/searchConference", function(self)
+    self.conferences = Conference:select()
+    return { render = "searchConference" }
+end)
+
+app:get("searchArticle", "/searchArticle", function(self)
+    self.articles = Article:select()
+    return { render = "searchArticle" }
+end)
+
 -- POST routes
 
 app:post("add_conference", "/conference", function(self)
@@ -81,6 +91,89 @@ app:post("/article", function(self)
         download_count = 0
     })
     return "Created an article " .. self.params.title
+end)
+
+app:post("searchConference", "/searchConference", function(self)
+    where=false;
+    mult=false;
+    if(string.len(self.params.name)>0)then
+	if(not(where))then
+        query="where ";
+	where=true;
+	end
+        query=query.."(name = '"..self.params.name.."')";
+	mult=true;
+    end
+    if(string.len(self.params.issm)>0)then
+	if(not(where))then
+        query="where ";
+	end
+	if(mult)then
+        query=query.." AND ";
+	end
+        query=query.."(issm ="..self.params.issm..")";
+	mult=true;
+    end
+    if(string.len(self.params.doi)>0)then
+	if(not(where))then
+        query="where ";
+	end
+	if(mult)then
+        query=query.." AND ";
+	end
+        query=query.."(doi ="..self.params.doi..")";
+	mult=true;
+    end
+    if(string.len(self.params.place)>0)then
+	if(not(where))then
+        query="where ";
+	end
+	if(mult)then
+        query=query.." AND ";
+	end
+        query=query.."(place ='"..self.params.place.."')";
+    end
+    
+    self.conferences = Conference:select(query)
+    
+    
+    return { render = "searchConference"}
+end)
+
+app:post("searchArticle", "/searchArticle", function(self)
+    where=false;
+    mult=false;
+    if(string.len(self.params.title)>0)then
+	if(not(where))then
+        query="where ";
+	where=true;
+	end
+        query=query.."(title = '"..self.params.title.."')";
+	mult=true;
+    end
+    if(string.len(self.params.abstract)>0)then
+	if(not(where))then
+        query="where ";
+	end
+	if(mult)then
+        query=query.." AND ";
+	end
+        query=query.."(abstract ='"..self.params.abstract.."')";
+	mult=true;
+    end
+    if(string.len(self.params.download_count)>0)then
+	if(not(where))then
+        query="where ";
+	end
+	if(mult)then
+        query=query.." AND ";
+	end
+        query=query.."(download_count ="..self.params.download_count..")";
+    end
+    self.articles = Article:select(query)
+    
+    
+    return { render = "searchArticle"}
 end)
 
 return app
