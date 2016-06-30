@@ -6,7 +6,7 @@ config("development", {
         host = "pes201601.postgresql.dbaas.com.br",
         port = "5432",
         user = "pes201601",
-        password = "pes201601",
+        password = "",
         database = "pes201601"
     }
 })
