@@ -64,26 +64,21 @@ end)
 
 app:post("/article", function(self)
     Validate.assert_valid(self.params, {
-        { "conference_id", exists = true },
+        { "conference", exists = true },
         { "file", is_file = true }
     })
 
-    return self.params.conference
-    ------ solve this!
-    ----local conference = Conference:find(1)
-    ----local persons    = Person:find_all({1,2,3,4 ...})
+    ---- solve this!
+    --local persons = Person:find_all({1,2,3,4 ...})
 
-    --local article = Article:create({
-    --    title = self.params.title,
-    --    abstract = self.params.abstract,
-    --    conference_id = self.params.conference_id,
-    --    file_path = "static/articles/"..self.params.file,
-    --    download_count = 0
-    --})
-    --return "Created an article " .. self.params.title .. "\n" ..
-    --"in conference " .. conference.name .. "\n" ..
-    --"with file " .. self.params.file
+    local article = Article:create({
+        title = self.params.title,
+        abstract = self.params.abstract,
+        conference_id = self.params.conference,
+        file_path = "static/articles/"..self.params.file,
+        download_count = 0
+    })
+    return "Created an article " .. self.params.title
 end)
-
 
 return app
