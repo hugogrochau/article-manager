@@ -18,6 +18,7 @@
                     <div class="col-sm-10">
                          <select id="conference" name="conference">
                          <% for i,conf in ipairs(conferences) do %>
+                         <!--  primary_key here looks like security shitness... -->
                          <option value="<%= conf.id %>"><%= conf.name %></option>
                          <% end %>
                          </select>
@@ -53,9 +54,9 @@
         <div class="list-group">
             <% for i, article in ipairs(articles) do %>
             <a href="#" class="list-group-item">
-                <h4 class="list-group-item-heading">article.title</h4>
-                <p class="list-group-item-text">article.abstract</p>
-                <p class="list-group-item-text" style="color : grey"><small>Gustavo, Hugo, João</small></p>
+                <h4 class="list-group-item-heading"><%=article.title%></h4>
+                <p class="list-group-item-text"><%=article.abstract%></p>
+                <p class="list-group-item-text" style="color : grey"><small><%=article.authors%></small></p>
             </a>
             <% end %>
         </div>
