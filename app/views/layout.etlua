@@ -35,15 +35,15 @@
                 <ul class="nav navbar-nav">
                     <li><a href="<%= url_for("conferences") %>">Conferências</a></li>
                 </ul>
-                <div class="navbar-form navbar-right">
+                <form class="navbar-form navbar-right" action="conferences" method="get">
                     <div class="form-group">
-                        <input type="text" placeholder="usuario" name="edtUsername" class="form-control" />
+                        <input type="text" placeholder="usuario" email="email" class="form-control" />
                     </div>
                     <div class="form-group">
-                        <input type="password" placeholder="senha" name="edtPassword" class="form-control" />
+                        <input type="password" placeholder="senha" password="password" class="form-control" />
                     </div>
                     <button type="submit" class="btn btn-default" style="color: #00B4FC">Sign In</button>
-                </div>
+                </form>
             </div> <!-- /Navbar collapse -->
         </div>
     </nav> <!-- /Bootstrap Navbar -->
