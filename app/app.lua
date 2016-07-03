@@ -1,3 +1,22 @@
+--[[
+
+  Titulo: app.lua
+  Autores:
+   - Gustavo Martins
+   - Hugo Grochau
+   - Michelle Valente
+   - Érico Nascimento
+   - Lucas Hardman
+   - Marcelo Politzer
+   - Tatiana Magdalena
+   - Marcos Rapoport
+   - Philipe Bonfim
+  Data:    2016-07-03
+  Versão:  0.1
+Tamanho: 8Kb
+
+--]]
+
 local lapis = require("lapis")
 local db = require("lapis.db")
 local Validate = require("lapis.validate")
