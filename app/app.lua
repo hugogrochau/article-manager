@@ -91,7 +91,7 @@ app:post("add_article", "/conference", function(self)
     return { render = "conference" }
 end)
 
-app:post("add_conference", "/conferences", function(self)
+app:post("conferences", "/conferences", function(self)
     conference = Conference:create({
         issm = self.params.issm,
         doi = self.params.doi,
