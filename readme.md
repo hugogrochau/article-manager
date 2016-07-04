@@ -35,3 +35,7 @@ Tecnologias
 Diário
 -------------
 - Diários individuais na pasta docs
+
+Diagramas
+-------------
+- Figuras na pasta docs
