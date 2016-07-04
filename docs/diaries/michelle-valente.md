@@ -20,6 +20,6 @@
 * Reunir equipes para discutir finalização do trabalho
 
 ## 04/07/2016
-* Discutir com equipes finalizacao do trabalho
-* Verificar aplicacao de regras no codigo
-* Criei um diagrama de User Experience Design do site
+* Discutir com equipes finalização do trabalho
+* Verificar aplicação de regras no codigo
+* Criação um diagrama de User Experience Design do site
