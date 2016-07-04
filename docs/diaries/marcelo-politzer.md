@@ -11,3 +11,6 @@
 * inserção de artigos lista as opções de conferência e adequação dos etlua para tal
 * backend e etlua para listar 10 artigos com mais download
 
+## 03/07/2016
+* adição de link na lista de conferências no index.html
+
