@@ -22,4 +22,4 @@
 ## 04/07/2016
 * Discutir com equipes finalizacao do trabalho
 * Verificar aplicacao de regras no codigo
-* Criar arquitetura final do sistema
+* Criei um diagrama de User Experience Design do site
