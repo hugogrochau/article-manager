@@ -8,9 +8,8 @@
         </div>
 
         <div class="row" style="margin : 0">
-            <h2>Conferências</h2>
-
             <div class="col-md-6">
+                <h2>Conferências</h2>
                 <% for i, conference in ipairs(conferences) do %>
                     <% if i%2 == 1 then %>
                         <div class="am-card">
@@ -22,16 +21,15 @@
                     <% end %>
                 <% end %>
             </div>
+
+            <h2>Artigos mais lidos</h2>
             <div class="col-md-6">
-                <% for i, conference in ipairs(conferences) do %>
-                    <% if i%2 == 0 then %>
-                        <div class="am-card">
-                            <h4 class="am-card-title"><%= conference.name %></h4>
-                            <div class="am-container">
-                                <p><%= conference.place %></p>
-                            </div>
-                        </div>
-                    <% end %>
+                <% for i, article in ipairs(top_articles) do %>
+                <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading"><%=article.title%></h4>
+                    <p class="list-group-item-text"><%=article.abstract%></p>
+                    <p class="list-group-item-text" style="color : grey"><small><%=article.authors%></small></p>
+                    </a>
                 <% end %>
             </div>
         </div>

@@ -1,50 +1,45 @@
 
     <!-- HEADER -->
     <div class="page-header">
-        <h2>Conferências</h2>
+        <h2>Busca</h2>
     </div>
 
     <div class="panel">
-        <div class="panel-heading"><h4>Adicionar conferência</h4></div>
-        <form class="form-horizontal" action="conference" method="post">
+        <div class="panel-heading"><h4>Filtros</h4></div>
+        <form class="form-horizontal" action="searchConference" method="post">
             <div class="form-group">
-                <label for="name" class="col-sm-2 control-label">Nome da conferência</label>
+                <label for="inputConferenceName" class="col-sm-2 control-label">Nome da conferência</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="name" name="name" placeholder="nome da conferência" />
                 </div>
             </div>
             <div class="form-group">
-                <label for="issm" class="col-sm-2 control-label">ISSM</label>
+                <label for="inputIssim" class="col-sm-2 control-label">ISSM</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="issm" name="issm" placeholder="ISSM" />
                 </div>
             </div>
             <div class="form-group">
-                <label for="doi" class="col-sm-2 control-label">DOI</label>
+                <label for="inputDoi" class="col-sm-2 control-label">DOI</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="doi" name="doi" placeholder="DOI" />
                 </div>
             </div>
             <div class="form-group">
-                <label for="place" class="col-sm-2 control-label">Local</label>
+                <label for="inputPlace" class="col-sm-2 control-label">Local</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="place" name="place" placeholder="local" />
                 </div>
             </div>
             <div class="form-group">
-                <label for="date" class="col-sm-2 control-label">Data</label>
-                <div class="col-sm-10">
-                    <input type="date" class="form-control" id="date" name="date" placeholder="local" />
-                </div>
-            </div>
-            <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-default">Adicionar</button>
+                    <button type="submit" class="btn btn-default">Buscar</button>
                 </div>
             </div>
         </form>
     </div>
 
+    <%if not (conferences==nil) and next(conferences) then%>	
     <div class="row ga-row">
         <div class="panel">
             <table class="table ga-table table-hover">
@@ -73,3 +68,4 @@
             </table>
         </div>
     </div>
+    <%end%>
