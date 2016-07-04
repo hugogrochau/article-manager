@@ -4,7 +4,7 @@
     <div>
         <div class="panel">
             <div class="panel-heading"><h4>Add article</h4></div>
-	    <form class="form-horizontal" enctype: "multipart/form-data" action="/conference" method="post">
+	    <form class="form-horizontal" enctype="multipart/form-data" action="/conference" method="post">
 	        <input type="hidden" name="conference_id" value="<%= conference.id %>">
                 <div class="form-group">
                     <label for="name" class="col-sm-2 control-label">Nome</label>
@@ -40,7 +40,7 @@
 
         <div class="list-group">
             <% for i, article in ipairs(conference:get_articles()) do %>
-            <a href="/static/articles/<%= article.file_path %>" class="list-group-item">
+            <a href="<%= article.file_path %>" class="list-group-item">
                 <h4 class="list-group-item-heading"><%= article.title %></h4>
                 <p class="list-group-item-text"><%= article.abstract %></p>
                 <p class="list-group-item-text"><strong>Authors:</strong></p>

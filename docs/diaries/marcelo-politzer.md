@@ -14,3 +14,6 @@
 ## 03/07/2016
 * adição de link na lista de conferências no index.html
 
+## 04/07/2016
+* upload do arquivo.
+

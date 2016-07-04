@@ -77,14 +77,20 @@ app:post("add_article", "/conference", function(self)
         { "file", is_file = true }
     })
 
-    ---- solve this!
+    local article_file_path = "static/articles/"..self.params.file.filename
+    local fil=io.open(article_file_path, "w")
+
+    fil:write(self.params.file.content)
+    fil:close()
+
+    -- solve this!
     --local persons = Person:find_all({1,2,3,4 ...})
 
     local article = Article:create({
         title = self.params.title,
         abstract = self.params.abstract,
         conference_id = self.params.conference_id,
-        file_path = "static/articles/"..self.params.file,
+        file_path = article_file_path,
         download_count = 0
     })
     self.conference = Conference:find(self.params.conference_id)
