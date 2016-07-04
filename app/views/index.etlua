@@ -11,14 +11,14 @@
             <div class="col-md-6">
                 <h2>Conferências</h2>
                 <% for i, conference in ipairs(conferences) do %>
-                    <% if i%2 == 1 then %>
-                        <div class="am-card">
-                            <h4 class="am-card-title"><%= conference.name %></h4>
-                            <div class="am-container">
-                                <p><%= conference.place %></p>
-                            </div>
+                <a href="conference/<%= conference.id %>" class="list-group-item">
+                    <div class="am-card">
+                        <h4 class="am-card-title"><%= conference.name %></h4>
+                        <div class="am-container">
+                            <p><%= conference.place %></p>
                         </div>
-                    <% end %>
+                    </div>
+                </a>
                 <% end %>
             </div>
 
