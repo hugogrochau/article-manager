@@ -34,21 +34,4 @@ Tecnologias
 
 Diário
 -------------
-**03/06/2016**
--   Divisão do gurpo em 3 mini-grupos (Back-end/Front-end/Gerencial)
--   Modelagem básica do banco de dados
--   Página inicial
-
-**10/06/2016**
--   Estruturação do back-end
--   Utilização de templates para renderização do layout basico
--   Configuração do lapis para uso do etLua (biblioteca de renderização dinamica)
-
-**13/06/2016**
--   Criação das páginas : Conferência, Conferências, Edição e Artigo
--   Criação das sectios para poder adicionar conferência, edição e artigo
-
-**26/06/2016**
--   Criação da página : Administrador
--   Novos campos foram adicionados nas páginas para poder adicionar autores e editores
--   Isso termina a parte do Front-End
+- Diários individuais na pasta docs
