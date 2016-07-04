@@ -6,7 +6,7 @@
 
     <div class="panel">
         <div class="panel-heading"><h4>Filtros</h4></div>
-        <form class="form-horizontal" action="searchArticle" method="post">
+        <form class="form-horizontal" enctype="multipart/form-data" action="searchArticle" method="post">
             <div class="form-group">
                 <label for="inputArticleName" class="col-sm-2 control-label">Título do artigo </label>
                 <div class="col-sm-10">
@@ -49,7 +49,7 @@
 		
                 <tr>
 		    	
-                    <td><a href="/static/articles/<%= article.file_path %>"><%= article.title %></a></td>
+                    <td><a href="<%= article.file_path %>"><%= article.title %></a></td>
                     <td><%= article.abstract %></td>
                     <td><%= article.download_count %></td>
                 </tr>
